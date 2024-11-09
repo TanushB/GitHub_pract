@@ -9,9 +9,7 @@ runs:
         python-version: "3.x"  # This will use the latest version of Python 3
 
     - name: "Install dependencies"
-      run: |
-        pip install -r ./pr_summarizer_action/requirements.txt
+      run: pip install -r ./pr_summarizer_action/requirements.txt
     
     - name: "Run script"
-      run: |
-        python ./pr_summarizer_action/summarizer.py
+      run: python ./pr_summarizer_action/summarizer.py
