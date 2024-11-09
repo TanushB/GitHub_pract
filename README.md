@@ -1,0 +1,1 @@
+Intended to be a repository where I was experimenting with GitHub API and GitHub Actions, I built a PR summarizer tool that reviews PR's by querying Gemini with the diff between the PR branch and master. Presented this project as a Software Change Analysis tool in my Software Program Understanding class as well.
