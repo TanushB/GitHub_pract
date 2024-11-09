@@ -1,5 +1,17 @@
 name: csse490-pr-summarizer
 description: This action summarizes the changes made in a PR branch and evaluates the changes made.
 runs:
-  using: node16
-  main: src/index.js
+  using: "composite"
+  steps:
+    - name: "Set up Python"
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.x"  # This will use the latest version of Python 3
+
+    - name: "Install dependencies"
+      run: |
+        pip install -r ./pr_summarizer_action/requirements.txt
+    
+    - name: "Run script"
+      run: |
+        python ./pr_summarizer_action/summarizer.py
