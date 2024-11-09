@@ -9,7 +9,9 @@ runs:
         python-version: "3.x"  # This will use the latest version of Python 3
 
     - name: "Install dependencies"
+      shell: bash
       run: pip install -r ./pr_summarizer_action/requirements.txt
     
     - name: "Run script"
+      shell: bash
       run: python ./pr_summarizer_action/summarizer.py
