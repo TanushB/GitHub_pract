@@ -1,5 +1,8 @@
 def calculate_average(numbers):
-    if not numbers:
-        return 0  # Return 0 if the list is empty, avoids division by zero
-    total = sum(numbers)  # Use descriptive variable names and built-in sum function
-    return total / len(numbers)  # Simplify calculation
+    sum = 0
+    for i in range(0, len(numbers)):
+        sum = sum + numbers[i]
+    if len(numbers) > 0:
+        return sum / len(numbers)
+    else:
+        return None
